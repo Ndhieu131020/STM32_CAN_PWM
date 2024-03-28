@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\objects\stm32f10x_it.o"
+".\objects\system_stm32f10x.o"
+".\objects\systick_delay.o"
+".\objects\main.o"
+".\objects\misc.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_can.o"
+".\objects\stm32f10x_tim.o"
+".\objects\startup_stm32f10x_md.o"
+--strict --scatter ".\Objects\ECU2_Engine_Control.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ECU2_Engine_Control.map" -o .\Objects\ECU2_Engine_Control.axf
